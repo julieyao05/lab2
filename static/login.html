@@ -1,0 +1,32 @@
+<!doctype html> 
+
+<html>
+<head>
+	<meta name="description" content="CSE170 Web app">
+	<title>Sign up</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Amatic+SC" />
+	<style>
+		h1 {
+			color: #4169E1;
+			font: 400 100px/1.3 'Amatic SC';
+		  	text-shadow: 1px 1px 0px #ededed, 4px 4px 0px rgba(0,0,0,0.15);
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h1>Log in</h1>
+	<ul>
+		<li><img src="homebutton.png" id="home-button"><a href="home.html">Home</a></li>
+	</ul>
+	<div class="wrapper">
+		<form>
+		<label>User name</label><input type="text" name="username"><br>
+			<label>Password</label><input type="password" name="pwd"><br>
+		</form>	
+		<div><img src="loginbutton.png" onclick="location.href='user.html'" id="login-button"></a></div>
+		<div><a href="signup.html">First-time user? Sign up here!</a></div>
+	</div>
+</body>
+</html>

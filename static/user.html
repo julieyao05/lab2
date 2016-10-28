@@ -1,0 +1,44 @@
+<!doctype html> 
+
+<html>
+<head>
+	<meta name="description" content="CSE170 Web app">
+	<title>User page</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Amatic+SC" />
+	<style>
+		h1 {
+			color: #4169E1;
+			font: 400 100px/1.3 'Amatic SC';
+		  	text-shadow: 1px 1px 0px #ededed, 4px 4px 0px rgba(0,0,0,0.15);
+			text-align: center;
+		}
+	</style>
+
+</head>
+<body>
+	<h1>Family Tree</h1>
+	<ul>
+		<li><img src="homebutton.png" id="home-button"><a href="home.html">Home</a></li>
+  		<li><img src="addbutton.png" id="add-button"><a href="add.html">Add New Member</a></li>
+  		<li><img src="backbutton.png" id="back-button"><a href="login.html">Log in/Sign up</a></li>
+  		<li><img src="unlocked.png" id="logout-button"><a href="home.html">Log out</a></li>
+	</ul>
+
+	<div id="you-button" style="text-align:center">
+		<a href="info.html"><img src="you.png" id="you-button"/></a> 
+		You
+	</div>
+
+	<div style="align: left; text-align:center; position: fixed; margin-right: 3cm; margin-left: 3cm;">
+	    <a href="info.html"><img src="you.png" id="other-button" />
+	    <div class="caption" style="width: 140px">Uncle Bob</div>
+	</div>
+
+	<div style="float: right; margin-right: 3cm">
+	    <a href="info.html"><img src="you.png" id="other-button" />
+	    <div class="caption" style="width: 140px">Aunt Sally</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+body {
+	background-color: #F5FFFA;
+}
+h2 {
+	text-align: center;
+	font-family: Georgia;
+}
+p {
+	font-size: 120%;
+	font-family: Georgia;
+	text-align: left;
+	width: 400px;
+    border: 10px solid blue;
+    padding: 25px;
+    margin: auto;
+}
+.wrapper {
+	text-align: center;
+}
+label {
+	font-size: 20px;
+	display: inline-block;
+	width: 100px;
+	float: center;
+	clear: center;
+	text-align: right;
+}
+input, textarea {
+	display: inline-block;
+	float: center;
+}
+#background-img {
+	width: 20%;
+	height: auto;
+	position: absolute;
+    bottom: 0;
+    right: 0;
+}
+#login-button {
+	position: center;
+	top: 60%;
+	width: 150px;
+	height: 50px;
+	font-size:120%;
+}
+#back-button {
+	width: 50px;
+	height: 50px;
+
+	/*position: absolute;*/
+}
+#next-button {
+	width: 100px;
+	height: 80px;
+	position: relative;
+	left: 48%;
+}
+#finish-button {
+	width: 70px;
+	height: 50px;
+	position: relative;
+	left: 50%;
+	margin-top: 10%;
+}
+#home-button {
+	width: 40px;
+	height: 40px;
+
+}
+#add-button {
+	width: 40px;
+	height: 40px;
+
+}
+#logout-button {
+	width: 40px;
+	height: 40px;
+}
+#you-button {
+	width: 140px;
+	height: 150px;
+	position: fixed; 
+	top: 45%; 
+	left: 45%;
+}
+#other-button {
+	width: 140px;
+	height: 150px;
+
+}
+.caption {
+    text-align: center;
+}
+#reset-button {
+	width: 80px;
+	height: 40px;
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+li a{
+    display: block;
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-align: left;
+    float: right;
+}
+
+/* Change the link color on hover */
+li:hover {
+    background-color: #555;
+    color: white;
+    width: 200px;
+}
+
+ul li{
+    display: inline-block;
+    line-height: 16px;
+}
