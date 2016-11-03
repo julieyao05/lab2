@@ -1,0 +1,80 @@
+<!doctype html> 
+
+<html>
+<head>
+	<meta name="description" content="CSE170 Web app">
+	<title>Add member</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/members.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Amatic+SC" />
+	<style>
+		h1 {
+			color: #4169E1;
+			font: 400 100px/1.3 'Amatic SC';
+		  	text-shadow: 1px 1px 0px #ededed, 4px 4px 0px rgba(0,0,0,0.15);
+			text-align: center;
+		}
+	</style>
+
+</head>
+<body>
+	
+	<ul class="topnav" id="myTopnav">
+		<li><img src="images/homebutton.png" id="home-button"><a href="/">Home</a></li>
+  		<li><img src="images/backbutton.png" id="back-button"><a href="user">Family Tree</a></li>
+  		<li><img src="images/unlocked.png" id="logout-button"><a href="/">Log out</a></li>
+  		<li class="icon">
+	   		<a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+	  	</li>
+	</ul>
+	<h1>New member</h1>
+	<div class="wrapper">
+		<form name="newmember">
+			<label>Name</label><input type="text" name="name"><br>
+			<label>Relationship</label><input type="text" name="relationship"><br>
+			<label>Category</label>
+				<select>
+				  <option value="dad">Dad's side</option>
+				  <option value="mom">Mom's side</option>
+				</select><br>
+			<label>Gender</label>
+				<select>
+				  <option value="male">Male</option>
+				  <option value="female">Female</option>
+				  <option value="other">Other</option>
+				</select><br>
+			<label>Age</label><input type="text" name="age"><br>
+			<label>Height</label><input type="text" name="height"><br>
+			<label>Weight</label><input type="text" name="height"><br>
+			<br><label>Allergies</label><textarea style="width: 250px; height: 40px"></textarea><br>
+			<br><label>Sensitivities</label><textarea style="width: 250px; height: 40px"></textarea><br>
+			<br><label>Heart conditions</label><textarea style="width: 250px; height: 40px"></textarea><br>                                                                                    
+			<br><label>Medications</label><textarea style="width: 250px; height: 40px"></textarea><br>
+			<br><label>Behavioral problems</label><textarea style="width: 250px; height: 40px"></textarea><br>
+			<br><label>Emotional problems</label><textarea style="width: 250px; height: 40px"></textarea><br>
+			<br><label>Eye conditions</label><textarea style="width: 250px; height: 40px"></textarea><br>
+			<input type="reset">
+			<input type="submit" id="done">
+			
+		</form>
+	</div>
+
+	<button id="finish-button">Close</button>
+	<script>
+		document.getElementById("finish-button").onclick = function () {
+			var d = window.self;
+			d.opener = window.self;
+			d.close();
+		};
+		document.getElementById("done").onclick = function (e) {
+			opener.addMemberToMom();
+		}
+	</script>
+
+</body>
+</html>

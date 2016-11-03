@@ -1,0 +1,78 @@
+<!doctype html> 
+
+<html>
+<head>
+	<script>
+		/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+		function myFunction() {
+		    var x = document.getElementById("myTopnav");
+		    if (x.className === "topnav") {
+		        x.className += " responsive";
+		    } else {
+		        x.className = "topnav";
+		    }
+		}
+	</script>
+	<meta name="description" content="CSE170 Web app">
+	<title>User page</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/members.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Amatic+SC" />
+	<style>
+		h1 {
+			color: #4169E1;
+			font: 400 100px/1.3 'Amatic SC';
+		  	text-shadow: 1px 1px 0px #ededed, 4px 4px 0px rgba(0,0,0,0.15);
+			text-align: center;
+		}
+	</style>
+
+</head>
+<body>
+
+	<ul class="topnav" id="myTopnav">
+		<li><img src="images/homebutton.png" id="home-button"><a href="/">Home</a></li>
+  		<li><img src="images/addbutton.png" id="add-button"><a href="javascript:void(0);" name="spawn" title="Add New Member" onClick=window.open("add","Ratting","width=550,height=170,0,status=0,");>Add member</a></li>
+  		<li><img src="images/backbutton.png" id="back-button"><a href="login">Log in/Sign up</a></li>
+  		<li><img src="images/unlocked.png" id="logout-button"><a href="/">Log out</a></li>
+		<li class="icon">
+	   		<a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+	  	</li>
+	</ul>
+
+	<h1>Family Tree</h1>
+
+	<div style="position: relative; left: 40%;">
+	 	<div class="tree">
+			<ul>
+				<li>
+					<button type="button" onclick="location.href='info?info=me'">Me</button><br>
+					<ul>
+						<li name="dadlist">
+							<details>
+								<summary>Dad's side</summary>
+								<button type="button" onclick="location.href='info?info=dad'">Dad</button><br>
+								
+							</details>
+							
+						</li>
+						<li>
+							<details>
+								<summary>Mom's side</summary>
+								<ol id="momlist">
+									<button type="button" onclick="location.href='info?info=mom'">Mom</button><br>
+								</ol>
+							</details>
+						
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

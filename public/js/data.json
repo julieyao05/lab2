@@ -1,0 +1,54 @@
+{ 
+	"uncle": 
+		{
+			"name": "Bob",
+			"relationship": "Uncle",
+			"category": "Mom's side",
+			"gender": "Male",
+			"age": "56",
+			"height": "6'0",
+			"weight": "180 lbs",
+			"allergies": "N/A",
+			"sensitivities": "N/A",
+			"heart_conditions": "N/A",
+			"medications": "N/A",
+			"behavioral_problems": "N/A",
+			"emotional_problems": "N/A",
+			"eye_conditions": "N/A"
+		},
+	"mom":
+		{
+			"name": "Mary",
+			"relationship": "Mom",
+			"category": "Mom's side",
+			"gender": "Female",
+			"age": "50",
+			"height": "5'3",
+			"weight": "110 lbs",
+			"allergies": "N/A",
+			"sensitivities": "N/A",
+			"heart_conditions": "N/A",
+			"medications": "N/A",
+			"behavioral_problems": "N/A",
+			"emotional_problems": "N/A",
+			"eye_conditions": "N/A"
+		}, 
+	"dad":
+		{
+			"name": "Bill",
+			"relationship": "Dad",
+			"category": "Dad's side",
+			"gender": "Male",
+			"age": "53",
+			"height": "6'0",
+			"weight": "173 lbs",
+			"allergies": "N/A",
+			"sensitivities": "N/A",
+			"heart_conditions": "N/A",
+			"medications": "N/A",
+			"behavioral_problems": "N/A",
+			"emotional_problems": "N/A",
+			"eye_conditions": "N/A"
+		}
+
+}

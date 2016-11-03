@@ -1,0 +1,64 @@
+<!doctype html> 
+
+<html>
+<head>
+	<meta name="description" content="CSE170 Web app">
+	<title>Member info page</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Amatic+SC" />
+	<style>
+		h1 {
+			color: #4169E1;
+			font: 400 100px/1.3 'Amatic SC';
+		  	text-shadow: 1px 1px 0px #ededed, 4px 4px 0px rgba(0,0,0,0.15);
+			text-align: center;
+		}
+	</style>
+
+</head>
+<body>
+	
+	<ul class="topnav" id="myTopnav">
+		<li><img src="images/homebutton.png" id="home-button"><a href="/">Home</a></li>
+  		<li><img src="images/addbutton.png" id="add-button"><a href="add">Add New Member</a></li>
+  		<li><img src="images/backbutton.png" id="back-button"><a href="user">Family Tree</a></li>
+  		<li><img src="images/unlocked.png" id="logout-button"><a href="/">Log out</a></li>
+ 		<li class="icon">
+	   		<a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+	  	</li>
+	</ul>
+	<h1>info</h1>
+	<p>
+		Name: <span class="json"> {{name}} </span> <br>
+		Relationship: <span class="json"> {{relationship}} </span> <br>
+		Gender: <span class="json"> {{gender}} </span> <br>
+		Age: <span class="json"> {{age}} </span> <br>
+		Height: <span class="json"> {{height}} </span> <br>
+		Weight: <span class="json"> {{weight}} </span> <br>
+		Allergies: <span class="json"> {{allergies}} </span> <br>
+		Sensitivities: <span class="json"> {{sensitivities}} </span> <br>
+		Heart conditions: <span class="json"> {{heart_conditions}} </span> <br>
+		Medications: <span class="json"> {{medications}} </span> <br>
+		Behavioral problems: <span class="json"> {{behavioral_problems}} </span> <br>
+		Emotional problems: <span class="json"> {{emotional_problems}} </span> <br>
+		Eye conditions: <span class="json"> {{eye_conditions}} </span>
+
+	</p>
+	<button type="button" onclick="vanish();">Delete</button>
+	<script>
+	function vanish(){
+		console.log("reached");
+		var x = document.getElementsByClassName("json");
+		var i; 
+		for( i = 0; i < x.length; i++) {
+			x[i].innerHTML = ""; 
+		}
+	}
+		
+	</script>
+</body>
+</html>
