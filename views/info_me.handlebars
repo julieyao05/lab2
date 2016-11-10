@@ -39,24 +39,20 @@
 
 	<p id="info">
 		Name: <span class="json"> {{name}} </span> <br>
-		Relationship: <span class="json"> {{relationship}} </span> <br>
-		Side: {{side}} <br>
 		Gender: <span class="json"> {{gender}} </span> <br>
 		Age: <span class="json"> {{age}} </span> <br>
 		Height: <span class="json"> {{height}} </span> <br>
 		Weight: <span class="json"> {{weight}} </span> <br>
-		Allergies: <span class="json"> {{allergy}} </span> <br>
-		Sensitivities: <span class="json"> {{sensitivity}} </span> <br>
-		Heart conditions: <span class="json"> {{heart}} </span> <br>
-		Medications: <span class="json"> {{med}} </span> <br>
-		Behavioral problems: <span class="json"> {{bprob}} </span> <br>
-		Emotional problems: <span class="json"> {{eprob}} </span> <br>
-		Eye conditions: <span class="json"> {{eye}} </span>
+		Allergies: <span class="json"> {{allergies}} </span> <br>
+		Sensitivities: <span class="json"> {{sensitivities}} </span> <br>
+		Heart conditions: <span class="json"> {{heart_conditions}} </span> <br>
+		Medications: <span class="json"> {{medications}} </span> <br>
+		Behavioral problems: <span class="json"> {{behavioral_problems}} </span> <br>
+		Emotional problems: <span class="json"> {{emotional_problems}} </span> <br>
+		Eye conditions: <span class="json"> {{eye_conditions}} </span>
 	</p>
-	<button type="button" id="delete">Delete</button>
 	<button type="button" id="edit" >Edit</button>
-	<!--<button type="button" id="close">Close</button>-->
-
+	
 	<script>
 
 	/*function vanish(){
@@ -67,22 +63,8 @@
 			x[i].innerHTML = ""; 
 		}
 	}*/
-	document.getElementById("delete").onclick = function (e) {
-		window.location.href = 'user?remove=1&side={{side}}&relationship={{relationship}}&name={{name}}&id={{id}}';
-
-			/*if({{side}} == "dad") {
-				var ol = window.opener.getElementById("dadlist");
-			}
-			else {
-				var ol = window.opener.getElementById("momlist");
-			}
-
-			ol.removeChild(window.opener.getElementById({{id}}));*/
-
-		
-	}
 	document.getElementById("edit").onclick = function (e) {
-		window.location.href='edit?side={{side}}&relationship={{relationship}}&name={{name}}&id={{id}}';
+		window.location.href='edit_me';
 		/*var d = window.self;
 		d.opener = window.self;
 		d.close();*/

@@ -50,16 +50,18 @@
 	 	<div class="tree">
 			<ul>
 				<li>
-					<button id="me"><a href="javascript:void(0);" title="Add New Member" onClick=window.open("info?info=me","Ratting","width=550,height=170,0,status=0,");>me</a></button>
+					<button id="me"><a href="javascript:void(0);" title="Add New Member" onclick="location.href='info_me'");>me</a></button>
 					
 					<ul>
 						<li>
 							<details>
 								<summary>Dad's side</summary>
-								<ol id="dadlist">
-						
+								<ol id="dadlist">						
 									{{#each dtree}}
-										<button id="mom"><a href="#" title="Info" onClick=window.open("info?side={{side}}&relationship={{relationship}}&name={{name}}&id={{id}}","Ratting","width=550,height=170,0,status=0,");>{{relationship}} {{name}}</a></button><br>
+										<button id="button{{id}}"><a href="#" title="Info" onclick="location.href='info?side={{side}}&relationship={{relationship}}&name={{name}}&id={{id}}'");>{{relationship}} {{name}}</a></button><br>
+
+
+										<!--<button id="button{{id}}"><a href="#" title="Info" onClick=window.open("info?side={{side}}&relationship={{relationship}}&name={{name}}&id={{id}}","Ratting","width=550,height=170,0,status=0,");>{{relationship}} {{name}}</a></button><br>-->
 									{{/each}}
 								</ol>
 							</details>
@@ -70,8 +72,7 @@
 								<summary>Mom's side</summary>
 								<ol id="momlist">
 									{{#each mtree}}
-										<button id="mom"><a href="#" title="Info" onClick=window.open("info?side={{side}}&relationship={{relationship}}&name={{name}}&id={{id}}","Ratting","width=550,height=170,0,status=0,");>{{relationship}} {{name}}</a></button><br>
-											
+										<button id="button{{id}}"><a href="#" title="Info" onclick="location.href='info?side={{side}}&relationship={{relationship}}&name={{name}}&id={{id}}'");>{{relationship}} {{name}}</a></button><br>									
 									{{/each}}
 								</ol>
 							</details>
@@ -83,11 +84,6 @@
 		</div>
 	</div>
 	<!--</button><button type="button" class="btn btn-xs btn-danger" id="delete"><span class="glyphicon glyphicon-remove"></span>&nbsp;-->
-	<script>
-		/*document.getElementById("delete").onclick = function (e) {
-			this.parentElement.style.display = 'none';
-		}*/
-		
-	</script>
+	
 </body>
 </html>

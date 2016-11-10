@@ -11,9 +11,9 @@ exports.view = function(req, res){
 	var name = req.query.name;
 	var id = req.query.id;
 	models.member.findById(id, function (err, obj) {
-		console.log("INSIDE");
+
 		if(!err) {
-			console.log("SUCCESS");
+
 			res.render('info', obj);
 				/*for(var i = 0; i < obj.length; i++) {
 					if((obj[i].relationship == relationship) && (obj[i].name == name)) {

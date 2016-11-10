@@ -36,16 +36,9 @@
 	</ul>
 	<h1>edit</h1>
 	<form id="editForm" method="get" action="/user">
-		<input type="hidden" name="id" value="{{_id}}">
 		<input type="hidden" name="oldname" value="{{name}}">
-		<input type="hidden" name="update" value="1">
+		<input type="hidden" name="user" value="me">
 		<label>Name</label><input type="text" name="name" value="{{name}}"><br>
-		<label>Relationship</label><input type="text" name="relationship" value="{{relationship}}"><br>
-		<label>Family Side</label>
-				<select name="side">
-				  <option value="dad">Dad</option>
-				  <option value="mom">Mom</option>
-				</select><br>
 		<label>Gender</label>
 				<select name="gender">
 				  <option value="male">Male</option>
@@ -55,13 +48,13 @@
 		<label>Age</label><input type="text" name="age" value="{{age}}"><br>
 		<label>Height</label><input type="text" name="height" value='{{height}}'><br>
 		<label>Weight</label><input type="text" name="weight" value='{{weight}}'><br>
-		<br><label>Allergies</label><textarea name="allergy" style="width: 250px; height: 40px" contentediable='true'>{{allergy}}</textarea><br>
-		<br><label>Sensitivities</label><textarea name="sense" style="width: 250px; height: 40px" contenteditable='true'>{{sensitivity}}</textarea><br>
-		<br><label>Heart conditions</label><textarea name="heart" style="width: 250px; height: 40px" contenteditable='true'>{{heart}}</textarea><br>
-		<br><label>Medications</label><textarea name="med" style="width: 250px; height: 40px" contenteditable='true'>{{med}}</textarea><br>
-		<br><label>Behavioral problems</label><textarea name="bprob" style="width: 250px; height: 40px" contenteditable>{{bprob}}</textarea><br>
-		<br><label>Emotional problems</label><textarea name="eprob" style="width: 250px; height: 40px" contenteditable='true'>{{eprob}}</textarea><br>
-		<br><label>Eye conditions</label><textarea name="eye" style="width: 250px; height: 40px" contenteditable='true'>{{eye}}</textarea><br>
+		<br><label>Allergies</label><textarea name="allergy" style="width: 250px; height: 40px" contentediable='true'>{{allergies}}</textarea><br>
+		<br><label>Sensitivities</label><textarea name="sense" style="width: 250px; height: 40px" contenteditable='true'>{{sensitivities}}</textarea><br>
+		<br><label>Heart conditions</label><textarea name="heart" style="width: 250px; height: 40px" contenteditable='true'>{{heart_conditions}}</textarea><br>
+		<br><label>Medications</label><textarea name="med" style="width: 250px; height: 40px" contenteditable='true'>{{medications}}</textarea><br>
+		<br><label>Behavioral problems</label><textarea name="bprob" style="width: 250px; height: 40px" contenteditable>{{behavioral_problems}}</textarea><br>
+		<br><label>Emotional problems</label><textarea name="eprob" style="width: 250px; height: 40px" contenteditable='true'>{{emotional_problems}}</textarea><br>
+		<br><label>Eye conditions</label><textarea name="eye" style="width: 250px; height: 40px" contenteditable='true'>{{eye_conditions}}</textarea><br>
 		<input type="submit" id="edited">
 	</form>
 	<button type="button" onclick="location.href='user'">Cancel</button>

@@ -15,12 +15,12 @@ var user = require('./routes/user');
 var add = require('./routes/add');
 var info = require('./routes/info');
 var edit = require('./routes/edit');
+var info_me = require('./routes/info_me');
+var edit_me = require('./routes/edit_me');
+
 /* grab mongoose */
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/members');
-
-
-
 
 // Example route
 // var user = require('./routes/user');
@@ -53,8 +53,10 @@ app.get('/login', login.view);
 app.get('/signup', signup.view);
 app.get('/add', add.view);
 app.get('/info', info.view);
-app.get('/user', user.newMember);
+app.get('/user', user.memberFunctions);
 app.get('/edit', edit.view);
+app.get('/info_me', info_me.view);
+app.get('/edit_me', edit_me.view);
 
 
 // Example route
