@@ -14,6 +14,13 @@ var signup = require('./routes/signup');
 var user = require('./routes/user');
 var add = require('./routes/add');
 var info = require('./routes/info');
+var edit = require('./routes/edit');
+/* grab mongoose */
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/members');
+
+
+
 
 // Example route
 // var user = require('./routes/user');
@@ -44,9 +51,10 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 app.get('/login', login.view);
 app.get('/signup', signup.view);
-app.get('/user', user.view);
 app.get('/add', add.view);
 app.get('/info', info.view);
+app.get('/user', user.newMember);
+app.get('/edit', edit.view);
 
 
 // Example route

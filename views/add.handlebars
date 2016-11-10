@@ -34,46 +34,47 @@
 	</ul>
 	<h1>New member</h1>
 	<div class="wrapper">
-		<form name="newmember">
+		<form id="newmember" method="get" action="/user">
 			<label>Name</label><input type="text" name="name"><br>
 			<label>Relationship</label><input type="text" name="relationship"><br>
-			<label>Category</label>
-				<select>
-				  <option value="dad">Dad's side</option>
-				  <option value="mom">Mom's side</option>
+			<label>Family Side</label>
+				<select name="side">
+				  <option value="dad">Dad</option>
+				  <option value="mom">Mom</option>
 				</select><br>
 			<label>Gender</label>
-				<select>
+				<select name="gender">
 				  <option value="male">Male</option>
 				  <option value="female">Female</option>
 				  <option value="other">Other</option>
 				</select><br>
 			<label>Age</label><input type="text" name="age"><br>
 			<label>Height</label><input type="text" name="height"><br>
-			<label>Weight</label><input type="text" name="height"><br>
-			<br><label>Allergies</label><textarea style="width: 250px; height: 40px"></textarea><br>
-			<br><label>Sensitivities</label><textarea style="width: 250px; height: 40px"></textarea><br>
-			<br><label>Heart conditions</label><textarea style="width: 250px; height: 40px"></textarea><br>                                                                                    
-			<br><label>Medications</label><textarea style="width: 250px; height: 40px"></textarea><br>
-			<br><label>Behavioral problems</label><textarea style="width: 250px; height: 40px"></textarea><br>
-			<br><label>Emotional problems</label><textarea style="width: 250px; height: 40px"></textarea><br>
-			<br><label>Eye conditions</label><textarea style="width: 250px; height: 40px"></textarea><br>
+			<label>Weight</label><input type="text" name="weight"><br>
+			<br><label>Allergies</label><textarea name="allergy" style="width: 250px; height: 40px"></textarea><br>
+			<br><label>Sensitivities</label><textarea name="sense" style="width: 250px; height: 40px"></textarea><br>
+			<br><label>Heart conditions</label><textarea name="heart" style="width: 250px; height: 40px"></textarea><br>                                                                                    
+			<br><label>Medications</label><textarea name="med" style="width: 250px; height: 40px"></textarea><br>
+			<br><label>Behavioral problems</label><textarea name="bprob" style="width: 250px; height: 40px"></textarea><br>
+			<br><label>Emotional problems</label><textarea name="eprob" style="width: 250px; height: 40px"></textarea><br>
+			<br><label>Eye conditions</label><textarea name="eye" style="width: 250px; height: 40px"></textarea><br>
 			<input type="reset">
 			<input type="submit" id="done">
 			
 		</form>
 	</div>
-
-	<button id="finish-button">Close</button>
 	<script>
-		document.getElementById("finish-button").onclick = function () {
+		/*document.getElementById("finish-button").onclick = function (e) {
 			var d = window.self;
 			d.opener = window.self;
 			d.close();
-		};
+		};*/
+		/*var menu = document.getElementById("mySelect");
+		var selected = menu.options[menu.selectedIndex].text;
 		document.getElementById("done").onclick = function (e) {
-			opener.addMemberToMom();
-		}
+			
+			opener.addMemberToMom(document.getElementById('relationship').value, selected);
+		}*/
 	</script>
 
 </body>

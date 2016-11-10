@@ -36,7 +36,7 @@
 
 	<ul class="topnav" id="myTopnav">
 		<li><img src="images/homebutton.png" id="home-button"><a href="/">Home</a></li>
-  		<li><img src="images/addbutton.png" id="add-button"><a href="javascript:void(0);" name="spawn" title="Add New Member" onClick=window.open("add","Ratting","width=550,height=170,0,status=0,");>Add member</a></li>
+  		<li><img src="images/addbutton.png" id="add-button"><a href="/add" title="Add New Member">Add member</a></li>
   		<li><img src="images/backbutton.png" id="back-button"><a href="login">Log in/Sign up</a></li>
   		<li><img src="images/unlocked.png" id="logout-button"><a href="/">Log out</a></li>
 		<li class="icon">
@@ -50,13 +50,18 @@
 	 	<div class="tree">
 			<ul>
 				<li>
-					<button type="button" onclick="location.href='info?info=me'">Me</button><br>
+					<button id="me"><a href="javascript:void(0);" title="Add New Member" onClick=window.open("info?info=me","Ratting","width=550,height=170,0,status=0,");>me</a></button>
+					
 					<ul>
-						<li name="dadlist">
+						<li>
 							<details>
 								<summary>Dad's side</summary>
-								<button type="button" onclick="location.href='info?info=dad'">Dad</button><br>
-								
+								<ol id="dadlist">
+						
+									{{#each dtree}}
+										<button id="mom"><a href="#" title="Info" onClick=window.open("info?side={{side}}&relationship={{relationship}}&name={{name}}&id={{id}}","Ratting","width=550,height=170,0,status=0,");>{{relationship}} {{name}}</a></button><br>
+									{{/each}}
+								</ol>
 							</details>
 							
 						</li>
@@ -64,7 +69,10 @@
 							<details>
 								<summary>Mom's side</summary>
 								<ol id="momlist">
-									<button type="button" onclick="location.href='info?info=mom'">Mom</button><br>
+									{{#each mtree}}
+										<button id="mom"><a href="#" title="Info" onClick=window.open("info?side={{side}}&relationship={{relationship}}&name={{name}}&id={{id}}","Ratting","width=550,height=170,0,status=0,");>{{relationship}} {{name}}</a></button><br>
+											
+									{{/each}}
 								</ol>
 							</details>
 						
@@ -74,5 +82,12 @@
 			</ul>
 		</div>
 	</div>
+	<!--</button><button type="button" class="btn btn-xs btn-danger" id="delete"><span class="glyphicon glyphicon-remove"></span>&nbsp;-->
+	<script>
+		/*document.getElementById("delete").onclick = function (e) {
+			this.parentElement.style.display = 'none';
+		}*/
+		
+	</script>
 </body>
 </html>

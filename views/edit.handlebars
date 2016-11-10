@@ -1,0 +1,71 @@
+<!doctype html> 
+
+<html>
+<head>
+	<meta name="description" content="CSE170 Web app">
+	<title>Member info page</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/members.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Amatic+SC" />
+	<style>
+		h1 {
+			color: #4169E1;
+			font: 400 100px/1.3 'Amatic SC';
+		  	text-shadow: 1px 1px 0px #ededed, 4px 4px 0px rgba(0,0,0,0.15);
+			text-align: center;
+		}
+	</style>
+
+</head>
+<body>
+	<ul class="topnav" id="myTopnav">
+		<li><img src="images/homebutton.png" id="home-button"><a href="/">Home</a></li>
+  		<li><img src="images/addbutton.png" id="add-button"><a href="add">Add New Member</a></li>
+  		<li><img src="images/backbutton.png" id="back-button"><a href="user">Family Tree</a></li>
+  		<li><img src="images/unlocked.png" id="logout-button"><a href="/">Log out</a></li>
+ 		<li class="icon">
+	   		<a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+	  	</li>
+	</ul>
+	<h1>edit</h1>
+	<form id="editForm" method="get" action="/user">
+		<input type="hidden" name="id" value="{{_id}}">
+		<input type="hidden" name="oldname" value="{{name}}">
+		<input type="hidden" name="update" value="1">
+		<label>Name</label><input type="text" name="name" value="{{name}}"><br>
+		<label>Relationship</label><input type="text" name="relationship" value="{{relationship}}"><br>
+		<label>Family Side</label>
+				<select name="side" disabled>
+				  <option value="dad">Dad</option>
+				  <option value="mom">Mom</option>
+				</select><br>
+		<label>Gender</label>
+				<select name="gender">
+				  <option value="male">Male</option>
+				  <option value="female">Female</option>
+				  <option value="other">Other</option>
+				</select><br>
+		<label>Age</label><input type="text" name="age" value="{{age}}"><br>
+		<label>Height</label><input type="text" name="height" value='{{height}}'><br>
+		<label>Weight</label><input type="text" name="weight" value='{{weight}}'><br>
+		<br><label>Allergies</label><textarea name="allergy" style="width: 250px; height: 40px" value='{{allergies}}'></textarea><br>
+		<br><label>Sensitivities</label><textarea name="sense" style="width: 250px; height: 40px" value='{{sensitivities}}'></textarea><br>
+		<br><label>Heart conditions</label><textarea name="heart" style="width: 250px; height: 40px" value='{{heart_conditions}}'></textarea><br>
+		<br><label>Medications</label><textarea name="med" style="width: 250px; height: 40px" value='{{medications}}'></textarea><br>
+		<br><label>Behavioral problems</label><textarea name="bprob" style="width: 250px; height: 40px" value='{{behavioral_problems}}'></textarea><br>
+		<br><label>Emotional problems</label><textarea name="eprob" style="width: 250px; height: 40px" value='{{emotional_problems}}'></textarea><br>
+		<br><label>Eye conditions</label><textarea name="eye" style="width: 250px; height: 40px" value='{{eye_conditions}}'></textarea><br>
+		<input type="reset">
+		<input type="submit" id="edited">
+	</form>
+	<button type="button" onclick="location.href='user'">Cancel</button>
+
+</body>
+</html>

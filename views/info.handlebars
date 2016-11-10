@@ -9,6 +9,10 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
 	<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/members.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Amatic+SC" />
 	<style>
 		h1 {
@@ -32,33 +36,71 @@
 	  	</li>
 	</ul>
 	<h1>info</h1>
-	<p>
+
+	<p id="info">
 		Name: <span class="json"> {{name}} </span> <br>
 		Relationship: <span class="json"> {{relationship}} </span> <br>
+		Side: {{side}} <br>
 		Gender: <span class="json"> {{gender}} </span> <br>
 		Age: <span class="json"> {{age}} </span> <br>
 		Height: <span class="json"> {{height}} </span> <br>
 		Weight: <span class="json"> {{weight}} </span> <br>
-		Allergies: <span class="json"> {{allergies}} </span> <br>
-		Sensitivities: <span class="json"> {{sensitivities}} </span> <br>
-		Heart conditions: <span class="json"> {{heart_conditions}} </span> <br>
-		Medications: <span class="json"> {{medications}} </span> <br>
-		Behavioral problems: <span class="json"> {{behavioral_problems}} </span> <br>
-		Emotional problems: <span class="json"> {{emotional_problems}} </span> <br>
-		Eye conditions: <span class="json"> {{eye_conditions}} </span>
-
+		Allergies: <span class="json"> {{allergy}} </span> <br>
+		Sensitivities: <span class="json"> {{sensitivity}} </span> <br>
+		Heart conditions: <span class="json"> {{heart}} </span> <br>
+		Medications: <span class="json"> {{med}} </span> <br>
+		Behavioral problems: <span class="json"> {{bprob}} </span> <br>
+		Emotional problems: <span class="json"> {{eprob}} </span> <br>
+		Eye conditions: <span class="json"> {{eye}} </span>
 	</p>
-	<button type="button" onclick="vanish();">Delete</button>
+	<button type="button" id="delete">Delete</button>
+	<button type="button" id="edit" >Edit</button>
+	<button type="button" id="close">Close</button>
+	<!--<button type="button" id="edit">Edit</button></div>-->
 	<script>
-	function vanish(){
+
+	/*function vanish(){
 		console.log("reached");
 		var x = document.getElementsByClassName("json");
 		var i; 
 		for( i = 0; i < x.length; i++) {
 			x[i].innerHTML = ""; 
 		}
-	}
-		
+	}*/
+	document.getElementById("edit").onclick = function (e) {
+		window.opener.location.href='edit?side={{side}}&relationship={{relationship}}&name={{name}}';
+		var d = window.self;
+		d.opener = window.self;
+		d.close();
+	};
+	document.getElementById("close").onclick = function (e) {
+		var d = window.self;
+		d.opener = window.self;
+		d.close();
+	};
+
+
+	/*document.getElementById("edit").onclick = function (e) {
+		flag = false;
+	    var $this = $(this);
+	    $this.toggleClass('Edit');
+	    if($this.hasClass('Edit')){
+	        $this.text('Save'); 
+	        edit();
+	        flag = true;
+	        console.log($this[0].childNodes[0].nodeValue);
+	        console.log(flag);
+	        return;
+		        
+	    } else {
+	        $this.text('Edit');
+	        document.getElementById("dude").readOnly = true;
+	        console.log(flag);
+	    }
+
+	};*/
+	
+
 	</script>
 </body>
 </html>
