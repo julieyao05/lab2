@@ -2,6 +2,7 @@
 var data = require('../data.json');
 var models = require('../models');
 exports.memberFunctions = function(req, res){
+
 	var user = req.query.user;
 
 	var remove = req.query.remove;

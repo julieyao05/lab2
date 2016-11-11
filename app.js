@@ -19,8 +19,20 @@ var info_me = require('./routes/info_me');
 var edit_me = require('./routes/edit_me');
 
 /* grab mongoose */
+require("dotenv").load();
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/members');
+//mongoose.connect('mongodb://localhost/members')
+
+var models = require("./models");
+var db = mongoose.connection;
+
+// Database Connection
+mongoose.Promise = global.Promise;
+mongoose.connect(process.env.MONGOLAB_URI || process.env.MONGO_URI);
+db.on('error', console.error.bind(console, 'Mongo DB Connection Error:'));
+db.once('open', function(callback) {
+    console.log("Database connected successfully.");
+});
 
 // Example route
 // var user = require('./routes/user');
@@ -57,6 +69,7 @@ app.get('/user', user.memberFunctions);
 app.get('/edit', edit.view);
 app.get('/info_me', info_me.view);
 app.get('/edit_me', edit_me.view);
+
 
 
 // Example route

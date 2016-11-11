@@ -30,11 +30,14 @@
 	<h1>Log in</h1>
 	<div class="wrapper">
 		<form>
-		<label>User name</label><input type="text" name="username"><br>
+			<input type="hidden" name="login" value="1">
+			<label>User name</label><input type="text" name="username"><br>
 			<label>Password</label><input type="password" name="pwd"><br>
+			<!--<input type="submit" value="Login">-->
 		</form>	
 		<div><img src="images/loginbutton.png" onclick="location.href='user?user=jane'" id="login-button"></a></div>
 		<div><a href="signup">First-time user? Sign up here!</a></div>
 	</div>
+
 </body>
 </html>

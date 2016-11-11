@@ -15,6 +15,8 @@ var memberSchema = new mongoose.Schema({
 		'bprob': String,
 		'eprob': String,
 		'eye': String,
+}, {
+	collection: "members"
 });
-exports.member = mongoose.model('member', memberSchema);
+exports.member = mongoose.model('members', memberSchema);
 
