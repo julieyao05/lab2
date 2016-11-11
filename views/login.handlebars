@@ -29,15 +29,24 @@
 	</ul>
 	<h1>Log in</h1>
 	<div class="wrapper">
-		<form>
-			<input type="hidden" name="login" value="1">
+		<form name="login">
 			<label>User name</label><input type="text" name="username"><br>
 			<label>Password</label><input type="password" name="pwd"><br>
-			<!--<input type="submit" value="Login">-->
+			<input type="submit" value="Login" onClick="lookup(this.form)">
 		</form>	
-		<div><img src="images/loginbutton.png" onclick="location.href='user?user=jane'" id="login-button"></a></div>
+		<!--<div><img src="images/loginbutton.png" onclick="location.href='user?user=jane'" id="login-button"></a></div>-->
 		<div><a href="signup">First-time user? Sign up here!</a></div>
 	</div>
-
+	<script>
+		function lookup(form) {
+			if((form.username.value=="jane123")&&(form.pwd.value=="tree12345")) {
+				console.log("IN HERE");
+				window.open('user');
+			}
+			else {
+				alert("WRONG INFO");
+			}
+		};
+	</script>
 </body>
 </html>

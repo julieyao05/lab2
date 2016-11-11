@@ -21,7 +21,8 @@ var edit_me = require('./routes/edit_me');
 /* grab mongoose */
 //require("dotenv").load();
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/members')
+mongoose.connect('mongodb://localhost/members');
+
 
 /*var models = require("./models");
 var db = mongoose.connection;*/

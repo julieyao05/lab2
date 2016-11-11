@@ -3,7 +3,6 @@ var data = require('../data.json');
 /*var mongoose = require('mongoose');
 mongoose.connect("mongodb://localhost/members");*/
 var models = require('../models');
-
 exports.view = function(req, res){
 	var side = req.query.side; /* info?info=relationship*/
 
