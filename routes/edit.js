@@ -11,6 +11,7 @@ exports.view = function(req, res){
 	var id = req.query.id;
 	models.member.findById(id, function (err, obj) {
 		if(!err) {
+			console.log("OBJ IS: "+obj);
 			res.render('edit', obj);
 		}
 		else {
