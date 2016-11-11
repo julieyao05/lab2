@@ -91,22 +91,28 @@ exports.memberFunctions = function(req, res){
 	
 	//update if request sent from edit 
 	if(update=="1") {
+
 		
 		if(req.query.side =="dad") {
 			for(var x=0; x<data.dtree.length; x++) {
-				if((data.dtree[x].relationship == relationship) &&(data.dtree[x].name == oldname)) {
+				if(data.dtree[x].id == id) {
 					data.dtree[x].name = name;
+					data.dtree[x].relationship = relationship;
+					data.dtree[x].side = side;
+					data.dtree[x].id = id;
 				}
 			}
 		}
 		else if(req.query.side=="mom"){
-
 			for(var i=0; i<data.mtree.length; i++) {
 						/*if((data.mtree[i].relationship == relationship) && (data.mtree[i].name == oldname)) {
 							data.mtree[i].name = name;
 						}*/
 				if(data.mtree[i].id == id) {
 					data.mtree[i].name = name;
+					data.mtree[i].relationship = relationship;
+					data.mtree[i].side = side;
+					data.mtree[i].id = id;
 				}
 			}
 		}
