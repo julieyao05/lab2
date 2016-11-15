@@ -28,7 +28,6 @@ var models = require("./models");
 var db = mongoose.connection;
 
 // Database Connection
-//mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGOLAB_URI || process.env.MONGO_URI);
 db.on('error', console.error.bind(console, 'Mongo DB Connection Error:'));
 db.once('open', function(callback) {

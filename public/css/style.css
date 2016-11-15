@@ -1,6 +1,9 @@
 body, button{
-	background-color: #F5FFFA;
+	background-color: #F5F5DC;
 	padding-bottom:  70px;
+}
+h1 {
+	color: #228B22;
 }
 h2 {
 	text-align: center;
@@ -14,6 +17,12 @@ p {
     border: 10px solid blue;
     padding: 25px;
     margin: auto;
+}
+#help {
+	margin-bottom: 10px;
+    margin-left : 10px;
+    position: fixed;
+    bottom: 0;
 }
 .wrapper {
 	text-align: center;

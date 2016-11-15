@@ -12,7 +12,9 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Javascript connected!");
-	var array;
+	$(function () {
+  		$('[data-toggle="popover"]').popover()
+	});	
 	
 }
 

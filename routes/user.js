@@ -155,6 +155,7 @@ exports.memberFunctions = function(req, res){
 	else {
 		if (typeof(req.query.relationship) != "undefined") {
 		
+			console.log(height)
 
 			// add person's info to db
 			var newMember = new models.member({
