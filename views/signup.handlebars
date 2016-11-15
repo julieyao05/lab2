@@ -22,38 +22,136 @@
 </head>
 <body>
 	
-	<ul class="topnav" id="myTopnav">
-		<li><img src="images/homebutton.png" id="home-button"><a href="/">Home</a></li>
-  		<li><img src="images/backbutton.png" id="back-button"><a href="login">Log in</a></li>
-		<li class="icon">
-	   		<a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
-	  	</li>
-	</ul>
+	<nav class="navbar navbar-default navbar-fixed-bottom">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse">
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span> 
+	      </button>
+	      <a class="navbar-brand" href="#">Health-E-Tree</a>
+	    </div>
+	    <div class="collapse navbar-collapse" id="myNavbar">
+	      <ul class="nav navbar-nav">
+  			<li><a href="login"><span class="glyphicon glyphicon-arrow-left"></span> Back</a></li>
+	    </div>
+	  </div>
+	</nav>
+
 	<h1>Sign up</h1>
-	<div class="wrapper">
-		<form name="signup">
-			<label>User name</label><input type="text" name="username"><br>
-			<label>Password</label><input type="password" name="pwd"><br>
-			<label>Name</label><input type="text" name="name"><br>
-			<label>Gender</label>
-				<select>
-				  <option value="male">Male</option>
-				  <option value="female">Female</option>
-				  <option value="other">Other</option>
-				</select><br>
-			<label>Age</label><input type="text" name="age"><br>
-			<label>Height</label><input type="text" name="height"><br>
-			<label>Weight</label><input type="text" name="height"><br>
-			<br><label>Allergies</label><textarea style="width: 250px; height: 40px"></textarea><br>
-			<br><label>Sensitivities</label><textarea style="width: 250px; height: 40px"></textarea><br>
-			<br><label>Heart conditions</label><textarea style="width: 250px; height: 40px"></textarea><br>
-			<br><label>Medications</label><textarea style="width: 250px; height: 40px"></textarea><br>
-			<br><label>Behavioral problems</label><textarea style="width: 250px; height: 40px"></textarea><br>
-			<br><label>Emotional problems</label><textarea style="width: 250px; height: 40px"></textarea><br>
-			<br><label>Eye conditions</label><textarea style="width: 250px; height: 40px"></textarea><br>
-			<img id="reset-button" src="images/resetbutton.png" onclick="signup.reset()">
+		<form class="form-horizontal">
+			<fieldset>
+			<!-- Text input-->
+			<div class="form-group">
+			  <label class="col-md-4 control-label">Username</label>  
+			  <div class="col-md-3">
+			  <input name="username" type="text" class="form-control input-md" required="">
+			    
+			  </div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+			  <label class="col-md-4 control-label">Password</label> 
+			  <div class="col-md-3">
+			  <input name="pwd" type="password" class="form-control input-md" required="">
+			  </div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+			  <label class="col-md-4 control-label">Name</label>  
+			  <div class="col-md-3">
+			  <input name="name" type="text" class="form-control input-md" required="">
+			  </div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+			  <label class="col-md-4 control-label">Gender</label>  
+			  <div class="col-md-2">
+			  <input name="gender" type="text" class="form-control input-md" required="">
+			    
+			  </div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+			  <label class="col-md-4 control-label">Age</label>  
+			  <div class="col-md-2">
+			  <input name="age" type="text" class="form-control input-md" required="">
+			  </div>
+			</div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+			  <label class="col-md-4 control-label">Height</label>  
+			  <div class="col-md-2">
+			  <input name="height" type="text" class="form-control input-md" required="">
+			  </div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+			  <label class="col-md-4 control-label">Weight</label>  
+			  <div class="col-md-2">
+			  <input name="weight" type="text" class="form-control input-md" required="">
+			  </div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+			  <label class="col-md-4 control-label">Allergies</label>  
+			  <div class="col-md-4">
+			  <textarea name="allergy" type="text" class="form-control input-md" required=""></textarea>
+			  </div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+			  <label class="col-md-4 control-label">Sensitivities</label>  
+			  <div class="col-md-4">
+			  <textarea name="sense" type="text" class="form-control input-md" required=""></textarea>
+			  </div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+			  <label class="col-md-4 control-label">Heart Conditions</label>  
+			  <div class="col-md-4">
+			  <textarea name="heart" type="text" class="form-control input-md" required=""></textarea>
+			  </div>
+			</div>
+			<!-- Text input-->
+			<div class="form-group">
+			  <label class="col-md-4 control-label">Behavioral Problems</label>  
+			  <div class="col-md-4">
+			  <textarea name="bprob" type="text" class="form-control input-md" required=""></textarea>
+			  </div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+			  <label class="col-md-4 control-label">Emotional Problems</label>  
+			  <div class="col-md-4">
+			  <textarea name="eprob" type="text" class="form-control input-md" required=""></textarea>
+			  </div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+			  <label class="col-md-4 control-label">Eye Conditions</label>  
+			  <div class="col-md-4">
+			  <textarea name="eye" type="text" class="form-control input-md" required=""></textarea>
+			  </div>
+			</div>
+			</fieldset>
+			<div class="wrapper">
+				<button class="btn btn-danger" type="reset">Reset</button> <a href="user" class="btn btn-success">Finish</a>
+			</div>
 		</form>
 	</div>
-	<img src="images/finishbutton.png" onclick="location.href='user'" id="finish-button">
 </body>
 </html>

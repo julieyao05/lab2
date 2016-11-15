@@ -1,5 +1,6 @@
 body, button{
 	background-color: #F5FFFA;
+	padding-bottom:  70px;
 }
 h2 {
 	text-align: center;
@@ -16,7 +17,78 @@ p {
 }
 .wrapper {
 	text-align: center;
+    margin: 0 auto;
+
 }
+.center-block {  
+  min-height: 20%;  /* Fallback for vh unit */
+  min-height: 20vh; /* You might also want to use
+                        'height' property instead.
+                        
+                        Note that for percentage values of
+                        'height' or 'min-height' properties,
+                        the 'height' of the parent element
+                        should be specified explicitly.
+  
+                        In this case the parent of '.vertical-center'
+                        is the <body> element */
+
+  /* Make it a flex container */
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; 
+  
+  /* Align the bootstrap's container vertically */
+    -webkit-box-align : center;
+  -webkit-align-items : center;
+       -moz-box-align : center;
+       -ms-flex-align : center;
+          align-items : center;
+  
+  /* In legacy web browsers such as Firefox 9
+     we need to specify the width of the flex container */
+  width: 100%;
+  
+  /* Also 'margin: 0 auto' doesn't have any effect on flex items in such web browsers
+     hence the bootstrap's container won't be aligned to the center anymore.
+  
+     Therefore, we should use the following declarations to get it centered again */
+         -webkit-box-pack : center;
+            -moz-box-pack : center;
+            -ms-flex-pack : center;
+  -webkit-justify-content : center;
+          justify-content : center;
+}
+
+div.well{
+  height: 250px;
+} 
+
+.Absolute-Center {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.Absolute-Center.is-Responsive {
+  width: 50%; 
+  height: 50%;
+  min-width: 200px;
+  max-width: 400px;
+  padding: 40px;
+}
+
+#logo-container{
+  margin: auto;
+  margin-bottom: 10px;
+  width:285px;
+  height:340px;
+  background-image:url('logo.png');
+}
+
+
 label {
 	font-size: 20px;
 	display: inline-block;
@@ -36,14 +108,7 @@ input, textarea {
     bottom: 0;
     right: 0;
 }
-#login-button {
-	position: center;
-	top: 60%;
-	width: 150px;
-	height: 50px;
-	font-size:120%;
 
-}
 #back-button {
 	width: 50px;
 	height: 50px;
@@ -82,11 +147,6 @@ input, textarea {
 	float: left;
 }
 
-#reset-button {
-	width: 100px;
-	height: 50px;
-
-}
 
 * {margin: 0; padding: 0;}
 
@@ -119,7 +179,7 @@ input, textarea {
 	right: 50%;
 	border-top: 1px solid #ccc;
 	width: 50%; 
-	height: 20px;
+	height: 20px; /* 20*/
 }
 .tree li::after{
 	right: auto; 
@@ -162,18 +222,18 @@ right connector from last child*/
 	left: 50%;
 	border-left: 1px solid #ccc;
 	width: 0; 
-	height: 20px;
+	height: 20px; /* 20 */
 }
 
 .tree li details, button{
 	border: 1px solid #ccc;
-	padding: 10px 20px;
+	padding: 15px 25px; /*10, 20*/
 	text-decoration: none;
 	color: #666;
 	font-family: arial, verdana, tahoma;
 	font-size: 15px;
 	display: inline-block;
-	
+
 	border-radius: 5px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -223,15 +283,12 @@ ul.topnav li a {
     text-shadow: 2px 2px 8px #0066ff;
 }
 
-/* Change background color of links on hover */
-ul.topnav li a:hover {font-style: italic;}
+/*ul.topnav li a:hover {font-style: italic;}
 
-/* Hide the list item that contains the link that should open and close the topnav on small screens */
 ul.topnav li.icon {display: none;}
 
 
 
-/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
 @media screen and (max-width:680px) {
   ul.topnav li:not(:first-child) {display: none;}
   ul.topnav li.icon {
@@ -240,7 +297,6 @@ ul.topnav li.icon {display: none;}
   }
 }
 
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
 @media screen and (max-width:680px) {
   ul.topnav.responsive {position: relative;}
   ul.topnav.responsive li.icon {
@@ -256,4 +312,4 @@ ul.topnav li.icon {display: none;}
     display: block;
     text-align: left;
   }
-}
+}*/

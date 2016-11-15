@@ -1,9 +1,11 @@
 <!doctype html> 
 
-<html>
+<html lang="en">
 <head>
-	<meta name="description" content="CSE170 Web app">
-	<title>Sign up</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Health-E-Tree</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css"/>
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
@@ -20,27 +22,36 @@
 	</style>
 </head>
 <body>
-	
-	<ul class="topnav" id="myTopnav">
-		<li><img src="images/homebutton.png" id="home-button"><a href="/">Home</a></li>
-		<li class="icon">
-	   		<a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
-	  	</li>
-	</ul>
-	<h1>Log in</h1>
-	<div class="wrapper">
-		<form name="login">
-			<label>User name</label><input type="text" name="username"><br>
-			<label>Password</label><input type="password" name="pwd"><br>
-			<input type="submit" value="Login" onClick="lookup(this.form)">
-		</form>	
-		<!--<div><img src="images/loginbutton.png" onclick="location.href='user?user=jane'" id="login-button"></a></div>-->
-		<div><a href="signup">First-time user? Sign up here!</a></div>
+	<h1>Health-E-Tree</h1>   
+	<div class="container">
+	  <div class="row">	    	
+	    <div class="Absolute-Center is-Responsive">
+	      <div id="logo-container"></div>
+	      <div class="col-sm-12 col-md-10 col-md-offset-1">
+	        <form id="loginForm">
+	          <div class="form-group input-group">
+	            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+	            <input class="form-control" type="text" name='username' placeholder="username"/>          
+	          </div>
+	          <div class="form-group input-group">
+	            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+	            <input class="form-control" type="password" name='pwd' placeholder="password"/>     
+	          </div>
+	         
+	          <div class="form-group">
+	            <button type="submit" class="btn btn-default btn-block" onClick="lookup(this.form)">Log in</button><br>
+				<a href="signup" class="btn btn-default btn-block">Sign up</a>
+	          </div>
+	        
+	        </form>        
+	      </div>  
+	    </div>    
+	  </div>
 	</div>
-	<script>
+
+		<script>
 		function lookup(form) {
 			if((form.username.value=="jane123")&&(form.pwd.value=="tree12345")) {
-				console.log("IN HERE");
 				window.open('user');
 			}
 			else {

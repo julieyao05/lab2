@@ -1,6 +1,6 @@
 <!doctype html> 
 
-<html>
+<html lang="en">
 <head>
 	<script>
 		/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
@@ -13,7 +13,9 @@
 		    }
 		}
 	</script>
-	<meta name="description" content="CSE170 Web app">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>User page</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css"/>
@@ -33,24 +35,35 @@
 
 </head>
 <body>
+	<nav class="navbar navbar-default navbar-fixed-bottom">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse">
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span> 
+	      </button>
+	      <a class="navbar-brand" href="#">Health-E-Tree</a>
+	    </div>
+	    <div class="collapse navbar-collapse" id="myNavbar">
+	      <ul class="nav navbar-nav">
+  			<li class="active"><a href="user"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+		      <li><a href="add"><span class="glyphicon glyphicon-plus"></span> Add Member</a></li>
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li style="padding-right: 15px;"><a href="login"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
 
-	<ul class="topnav" id="myTopnav">
-		<li><img src="images/homebutton.png" id="home-button"><a href="/">Home</a></li>
-  		<li><img src="images/addbutton.png" id="add-button"><a href="/add" title="Add New Member">Add member</a></li>
-  		<li><img src="images/backbutton.png" id="back-button"><a href="login">Log in/Sign up</a></li>
-  		<li><img src="images/unlocked.png" id="logout-button"><a href="/">Log out</a></li>
-		<li class="icon">
-	   		<a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
-	  	</li>
-	</ul>
 
-	<h1>Family Tree</h1>
-
-	<div style="position: relative; left: 40%;">
-	 	<div class="tree">
+		<h1>Family Tree</h1>
+	<div class="container center-block">
+	      	<div class="tree">
 			<ul>
 				<li>
-					<button id="me"><a href="javascript:void(0);" title="Add New Member" onclick="location.href='info_me'");>me</a></button>
+					<button id="me"><a href="javascript:void(0);" title="Add New Member" onclick="location.href='info_me'");>Me</a></button>
 					
 					<ul>
 						<li>
@@ -59,9 +72,6 @@
 								<ol id="dadlist">						
 									{{#each dtree}}
 										<button id="button{{id}}"><a href="#" title="Info" onclick="location.href='info?side={{side}}&relationship={{relationship}}&name={{name}}&id={{id}}'");>{{relationship}} {{name}}</a></button><br>
-
-
-										<!--<button id="button{{id}}"><a href="#" title="Info" onClick=window.open("info?side={{side}}&relationship={{relationship}}&name={{name}}&id={{id}}","Ratting","width=550,height=170,0,status=0,");>{{relationship}} {{name}}</a></button><br>-->
 									{{/each}}
 								</ol>
 							</details>
@@ -83,6 +93,8 @@
 			</ul>
 		</div>
 	</div>
+	<!--<div style="position: relative; left: 40%;">-->
+	 	
 	<!--</button><button type="button" class="btn btn-xs btn-danger" id="delete"><span class="glyphicon glyphicon-remove"></span>&nbsp;-->
 	
 </body>

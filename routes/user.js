@@ -108,7 +108,6 @@ exports.memberFunctions = function(req, res){
 						/*if((data.mtree[i].relationship == relationship) && (data.mtree[i].name == oldname)) {
 							data.mtree[i].name = name;
 						}*/
-						console.log("wtffff");
 				if(data.mtree[i].id == id) {
 					data.mtree[i].name = name;
 					data.mtree[i].relationship = relationship;
