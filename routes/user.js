@@ -5,6 +5,7 @@ exports.memberFunctions = function(req, res){
 
 	var user = req.query.user;
 
+
 	var remove = req.query.remove;
 	var name = req.query.name;
 	var relationship = req.query.relationship;

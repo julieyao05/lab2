@@ -58,8 +58,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="user"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-                    <li><a href="add"><span class="glyphicon glyphicon-plus"></span> Add Member</a></li>
-                    <li style="padding-right: 15px;"><a href="login"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                    {{#unless homepage2}}
+                    	<li><a href="add"><span class="glyphicon glyphicon-plus"></span> Add Member</a></li>
+                    {{/unless}}
+                    <li style="padding-right: 15px;"><a href="/"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
                 </ul>
              
             </div>
@@ -78,18 +80,27 @@
 					<ul>
 						<li>
 							<details>
-								<summary>Dad's side</summary>
+								<summary>Dad's side 
+									{{#if homepage2}}
+										<a class="btn btn-default" href="add"><span class="glyphicon glyphicon-plus"></span>Add</a></button>
+									{{/if}}
+								</summary>
 								<ol id="dadlist">						
 									{{#each dtree}}
 										<button id="button{{id}}"><a href="#" title="Info" onclick="location.href='info?side={{side}}&relationship={{relationship}}&name={{name}}&id={{id}}'");>{{relationship}} {{name}}</a></button><br>
 									{{/each}}
+								
 								</ol>
 							</details>
-							
+
 						</li>
 						<li>
 							<details>
-								<summary>Mom's side</summary>
+								<summary>Mom's side 
+									{{#if homepage2}}
+									<a class="btn btn-default" href="add"><span class="glyphicon glyphicon-plus"></span>Add</a></button>
+									{{/if}}
+								</summary>
 								<ol id="momlist">
 									{{#each mtree}}
 										<button id="button{{id}}"><a href="#" title="Info" onclick="location.href='info?side={{side}}&relationship={{relationship}}&name={{name}}&id={{id}}'");>{{relationship}} {{name}}</a></button><br>									
@@ -103,6 +114,6 @@
 			</ul>
 		</div>
 	</div>
-	<button type="button" id="help" class="btn btn-danger" title="How to use the app" data-container="body" data-toggle="popover" data-content="To add member, access the 'add member' option in the navigation bar on top. To delete/edit, click on individual members to access the features on the bottom of their info page."><span class="glyphicon glyphicon-wrench"></span>HELP</button>
+	<button type="button" id="help" class="btn btn-danger" title="How to use the app" data-container="body" data-toggle="popover" data-content="To delete/edit, click on individual members to access the features on the bottom of their info page. To view a member's info, expand the mom's or dad's side dropdown list that he/she belongs to, find the member and click on the name."><span class="glyphicon glyphicon-wrench"></span>HELP</button>
 </body>
 </html>

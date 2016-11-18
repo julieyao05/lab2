@@ -14,7 +14,7 @@ p {
 	font-family: Georgia;
 	text-align: left;
 	width: 400px;
-    border: 10px solid blue;
+    border: 10px solid #666666;
     padding: 25px;
     margin: auto;
 }
@@ -186,14 +186,14 @@ input, textarea {
 	position: absolute; 
 	top: 0;
 	right: 50%;
-	border-top: 1px solid #ccc;
+	border-top: 1px solid #000; /* #ccc */
 	width: 50%; 
 	height: 20px; /* 20*/
 }
 .tree li::after{
 	right: auto; 
 	left: 50%;
-	border-left: 1px solid #ccc;
+	border-left: 1px solid #000; /* #ccc */
 }
 
 /*We need to remove left-right connectors from elements without 
@@ -212,7 +212,7 @@ right connector from last child*/
 }
 /*Adding back the vertical connector to the last nodes*/
 .tree li:last-child::before{
-	border-right: 1px solid #ccc;
+	border-right: 1px solid #000; /* #ccc */
 	border-radius: 0 5px 0 0;
 	-webkit-border-radius: 0 5px 0 0;
 	-moz-border-radius: 0 5px 0 0;
@@ -229,16 +229,16 @@ right connector from last child*/
 	position: absolute;
 	top: 0; 
 	left: 50%;
-	border-left: 1px solid #ccc;
+	border-left: 1px solid #000; /* #ccc */
 	width: 0; 
 	height: 20px; /* 20 */
 }
 
 .tree li details, button{
-	border: 1px solid #ccc;
+	border: 1px solid #000; /* #ccc */
 	padding: 15px 25px; /*10, 20*/
 	text-decoration: none;
-	color: #666;
+	color: #000; /* #666 */
 	font-family: arial, verdana, tahoma;
 	font-size: 15px;
 	display: inline-block;
@@ -322,3 +322,4 @@ ul.topnav li.icon {display: none;}
     text-align: left;
   }
 }*/
+#success_message{ display: none;}

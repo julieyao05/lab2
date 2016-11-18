@@ -15,7 +15,7 @@ function initializePage() {
 	$(function () {
   		$('[data-toggle="popover"]').popover()
 	});	
-	
+
 }
 
 
