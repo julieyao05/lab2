@@ -60,7 +60,8 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.view);
-app.get('/homepage2', index.view2);
+
+app.get('/user2', user.view);
 app.get('/signup', signup.view);
 app.get('/add', add.view);
 app.get('/info', info.view);
