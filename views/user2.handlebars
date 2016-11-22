@@ -74,9 +74,6 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="user"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-                    {{#unless homepage2}}
-                    	<li><a  class="addBtn" href="add"><span class="glyphicon glyphicon-plus"></span> Add Member</a></li>
-                    {{/unless}}
                     <li style="padding-right: 15px;"><a href="/"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
                 </ul>
              
@@ -97,7 +94,9 @@
 						<li>
 							<details>
 								<summary>Dad's side 
-									
+									{{#if homepage2}}
+										<button class="addBtn"><a class="btn btn-default" href="add"><span class="glyphicon glyphicon-plus"></span>Add</a></button>
+									{{/if}}
 								</summary>
 								<ol id="dadlist">						
 									{{#each dtree}}
@@ -111,7 +110,9 @@
 						<li>
 							<details>
 								<summary>Mom's side 
-									
+									{{#if homepage2}}
+									<button class="addBtn"><a class="btn btn-default" href="add"><span class="glyphicon glyphicon-plus"></span>Add</a></button>
+									{{/if}}
 								</summary>
 								<ol id="momlist">
 									{{#each mtree}}
