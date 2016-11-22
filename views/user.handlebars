@@ -97,7 +97,9 @@
 						<li>
 							<details>
 								<summary>Dad's side 
-									
+									{{#if homepage2}}
+									<button class="addBtn"><a class="btn btn-default" href="add"><span class="glyphicon glyphicon-plus"></span>Add</a></button>
+									{{/if}}
 								</summary>
 								<ol id="dadlist">						
 									{{#each dtree}}
@@ -111,7 +113,9 @@
 						<li>
 							<details>
 								<summary>Mom's side 
-									
+									{{#if homepage2}}
+									<button class="addBtn"><a class="btn btn-default" href="add"><span class="glyphicon glyphicon-plus"></span>Add</a></button>
+									{{/if}}
 								</summary>
 								<ol id="momlist">
 									{{#each mtree}}
