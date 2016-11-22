@@ -1,10 +1,7 @@
-// Get all of our friend data
 var data = require('../data.json');
 var models = require('../models');
-
-exports.memberFunctions = function(req, res){
-	data['homepage2'] = false;
-
+exports.view = function(req, res) {
+	data['homepage2'] = true;
 	var user = req.query.user;
 
 	var remove = req.query.remove;
@@ -195,6 +192,5 @@ exports.memberFunctions = function(req, res){
 		console.log(data);
 		res.render('user', data);
 	}
-	}
+	}		
 };
-
