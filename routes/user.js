@@ -196,8 +196,6 @@ exports.view = function(req, res) {
 	}		
 };
 
-
-
 exports.memberFunctions = function(req, res){
 	data['homepage2'] = false;
 
