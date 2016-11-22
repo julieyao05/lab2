@@ -77,7 +77,7 @@ exports.view = function(req, res) {
 				console.log("Member deleted!");
 			});
 		});
-		res.render('user', data);
+		res.render('user2', data);
 	}
 	else {
 
@@ -137,7 +137,7 @@ exports.view = function(req, res) {
 				});
 				console.log('modified object '+obj);
 				console.log(data);
-				res.render('user', data);
+				res.render('user2', data);
 			
 			}
 			else {
@@ -190,7 +190,7 @@ exports.view = function(req, res) {
 			//data[req.query.relationship] = JSON.parse('{"name": "'+req.query.name+'", "relationship": "'+req.query.relationship+'", "side": "'+req.query.side+'", "gender": "'+req.query.gender+'", "age": "'+req.query.age+'", "height": "'+req.query.height+'", "weight": "'+req.query.weight+'", "allergies": "'+req.query.allergy+'", "sensitivities": "'+req.query.sense+'", "heart_conditions": "'+req.query.heart+'", "medications": "'+req.query.med+'", "behavioral_problems": "'+req.query.bprob+'", "emotional_problems": "'+req.query.eprob+'", "eye_conditions": "'+req.query.eye+'"}');
 		}
 		console.log(data);
-		res.render('user', data);
+		res.render('user2', data);
 	}
 	}		
 };
