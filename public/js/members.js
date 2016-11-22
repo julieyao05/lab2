@@ -15,7 +15,9 @@ function initializePage() {
 	$(function () {
   		$('[data-toggle="popover"]').popover()
 	});	
-
+	$('.addBtn').click(function() {
+		ga('send', 'event', 'add', 'click');
+	});
 }
 
 
