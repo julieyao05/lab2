@@ -47,7 +47,12 @@
     </nav>
     <div style="padding-top: 50px;"></div>
 	<h1>New member</h1>
+	{{#if homepage2}}
+	<form class="form-horizontal" id="newmember" method="get" action="/user2">
+	{{else}}
 	<form class="form-horizontal" id="newmember" method="get" action="/user">
+	{{/if}}
+
 			<fieldset style="margin: 40px;">
 			<!-- Text input-->
 			<div class="form-group">
