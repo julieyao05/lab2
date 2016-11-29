@@ -127,6 +127,7 @@ exports.memberFunctions = function(req, res){
 				obj.weight = weight;
 				obj.allergy = allergy;
 				obj.sensitivity = sense;
+				obj.med = med;
 				obj.heart = heart;
 				obj.bprob = bprob;
 				obj.eprob = eprob;
