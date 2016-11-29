@@ -9,6 +9,8 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css"/>
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	    <link href="css/landing-page.css" rel="stylesheet">
+
 	<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script>
 	<script type="text/javascript" src="js/members.js"></script>
@@ -18,14 +20,13 @@
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Amatic+SC" />
 	<style>
 		h1 {
-			font: 400 100px/1.3 'Amatic SC';
 		  	text-shadow: 1px 1px 0px #ededed, 4px 4px 0px rgba(0,0,0,0.15);
 			text-align: center;
 		}
 	</style>
 
 </head>
-<body>
+<body id="treebg">
 	<nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
         <div class="container topnav">
             <div class="navbar-header">
@@ -49,8 +50,8 @@
     </nav>
 <div style="padding-top: 50px;"></div>
 
-	<h1>edit</h1>
-	<form class="form-horizontal" id="editForm" method="get" action="/user">
+	<h1 id="padding">EDIT</h1>
+	<form id="content-padding" class="form-horizontal" id="editForm" method="get" action="/user">
 		<input type="hidden" name="oldname" value="{{name}}">
 		<input type="hidden" name="user" value="me">
 			<fieldset style="margin: 40px;">

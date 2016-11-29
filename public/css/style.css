@@ -291,35 +291,3 @@ ul.topnav li a {
     font-size: 17px;
     text-shadow: 2px 2px 8px #0066ff;
 }
-
-/*ul.topnav li a:hover {font-style: italic;}
-
-ul.topnav li.icon {display: none;}
-
-
-
-@media screen and (max-width:680px) {
-  ul.topnav li:not(:first-child) {display: none;}
-  ul.topnav li.icon {
-    float: right;
-    display: inline-block;
-  }
-}
-
-@media screen and (max-width:680px) {
-  ul.topnav.responsive {position: relative;}
-  ul.topnav.responsive li.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  ul.topnav.responsive li {
-    float: none;
-    display: inline;
-  }
-  ul.topnav.responsive li a {
-    display: block;
-    text-align: left;
-  }
-}*/
-#success_message{ display: none;}

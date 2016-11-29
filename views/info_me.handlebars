@@ -9,6 +9,8 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css"/>
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	    <link href="css/landing-page.css" rel="stylesheet">
+
 	<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script>
 	<script type="text/javascript" src="js/members.js"></script>
@@ -18,14 +20,13 @@
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Amatic+SC" />
 	<style>
 		h1 {
-			font: 400 100px/1.3 'Amatic SC';
 		  	text-shadow: 1px 1px 0px #ededed, 4px 4px 0px rgba(0,0,0,0.15);
 			text-align: center;
 		}
 	</style>
 
 </head>
-<body>
+<body id="treebg">
 	
 	<nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
         <div class="container topnav">
@@ -49,20 +50,20 @@
         </div>
     </nav>
 <div style="padding-top: 50px;"></div>
-	<h1>my info</h1>
-	<p id="info">
-		Name: <span class="json"> {{name}} </span> <br>
-		Gender: <span class="json"> {{gender}} </span> <br>
-		Age: <span class="json"> {{age}} </span> <br>
-		Height: <span class="json"> {{height}} </span> <br>
-		Weight: <span class="json"> {{weight}} </span> <br>
-		Allergies: <span class="json"> {{allergies}} </span> <br>
-		Sensitivities: <span class="json"> {{sensitivities}} </span> <br>
-		Heart conditions: <span class="json"> {{heart_conditions}} </span> <br>
-		Medications: <span class="json"> {{medications}} </span> <br>
-		Behavioral problems: <span class="json"> {{behavioral_problems}} </span> <br>
-		Emotional problems: <span class="json"> {{emotional_problems}} </span> <br>
-		Eye conditions: <span class="json"> {{eye_conditions}} </span>
+	<h1 id="padding">MY INFO</h1>
+	<p id="content-padding" id="info" style="font-family: Helvetica, Arial, Sans-Serif">
+		Name: <span id="inputcontent" class="json"> {{name}} </span> <br>
+		Gender: <span id="inputcontent" class="json"> {{gender}} </span> <br>
+		Age: <span id="inputcontent" class="json"> {{age}} </span> <br>
+		Height: <span id="inputcontent" class="json"> {{height}} </span> <br>
+		Weight: <span id="inputcontent" class="json"> {{weight}} </span> <br>
+		Allergies: <span id="inputcontent" class="json"> {{allergies}} </span> <br>
+		Sensitivities: <span id="inputcontent" class="json"> {{sensitivities}} </span> <br>
+		Heart conditions: <span id="inputcontent" class="json"> {{heart_conditions}} </span> <br>
+		Medications: <span id="inputcontent" class="json"> {{medications}} </span> <br>
+		Behavioral problems: <span id="inputcontent" class="json"> {{behavioral_problems}} </span> <br>
+		Emotional problems: <span id="inputcontent" class="json"> {{emotional_problems}} </span> <br>
+		Eye conditions: <span id="inputcontent" class="json"> {{eye_conditions}} </span>
 	</p>
 	<div class="wrapper">
 	<br><button type="button" class="btn btn-primary" id="edit" ><span class="glyphicon glyphicon-pencil"></span>Edit</button>

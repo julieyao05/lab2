@@ -21,6 +21,12 @@ h6 {
     font-weight: 700;
 }
 
+h1 {
+    color: #2E86EA;
+    font-weight: 900;
+    font-size: 50px;
+    }
+
 .topnav {
     font-size: 14px; 
 }
@@ -175,3 +181,51 @@ p.copyright {
   height:340px;
   background-image:url(../images/logo.png);
 }
+.bluebg {
+    background-image: url(../images/blue-bg.jpg);
+    background-size: auto 200%;
+}
+
+#treebg {
+     background-image: url(../images/treebg.png);
+     background-size : cover;
+}
+#inputcontent {
+    font-weight: lighter;
+}
+
+#padding {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    background-image: url(../images/white-bg.png);
+    border-radius: 5px;
+    max-width: 400px
+}
+
+#content-padding {
+    background-image: url(../images/white-bg.png);
+    margin: auto;
+    padding: 5px;
+    border-radius: 5px;
+    max-width: 700px;
+    
+}
+
+#button-width {
+    max-width: 150px;
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#input-width {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
